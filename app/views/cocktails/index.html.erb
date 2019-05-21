@@ -1,0 +1,25 @@
+<h1>My Cocktails</h1>
+<%= link_to "Add a cocktail", new_cocktail_path(@cocktails), class: "btn btn-ghost btn-sm" %>
+<div class="cards-cocktails row">
+  <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="cocktail-card">
+        <div class="card-top">
+          <h5><%= cocktail.name %></h5>
+          <div class="ingredient-list">
+            <% cocktail.doses.each do |dose|%>
+              <%= dose.ingredient.name %>, <strong><%= dose.description%></strong><br>
+          <% end %>
+
+          </div>
+        </div>
+        <div class="card-bottom">
+        <%= link_to "More info", cocktail_path(cocktail), class: "info-link" %>
+        <%= link_to cocktail_path(cocktail), method: :delete do %>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

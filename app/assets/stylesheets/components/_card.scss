@@ -1,0 +1,95 @@
+.cocktail-card {
+  background-color: white;
+  font-size: 20px;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 250px;
+  margin: 10px;
+}
+
+.card-top {
+  height: 210px;
+  padding: 10px;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  transition: all 5s ease;
+  h5 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.ingredient-list {
+  opacity: 0;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  height: 40px;
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  a {
+    color: #333333;
+    font-size: 18px;
+  }
+  a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+  }
+}
+
+.card-cocktail {
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 70px);
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-bottom-left-radius: 3px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+.cocktail-description {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  height: calc(100vh - 70px);
+  color: #333333;
+  font-size: 16px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  border-bottom-right-radius: 3px;
+  padding-top: auto;
+  padding-bottom: auto;
+  padding: 10px;
+  .ingredients-list {
+    width: 100%;
+    .ingredient {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size:20px;
+    }
+  }
+  h3 {
+    color: #333333;
+    margin-top: 5px;
+    font-size: 24px;
+    font-weight: bolder;
+  }
+
+}
