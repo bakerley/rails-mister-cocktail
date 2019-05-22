@@ -6,7 +6,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
-    set_cocktail
+    @cocktail = Cocktail.find(params[:id])
     @doses = @cocktail.doses.all
   end
 
@@ -24,13 +24,12 @@ class CocktailsController < ApplicationController
   end
 
   def destroy
-    set_cocktail
+    @cocktail = Cocktail.find(params[:id])
     @cocktail.destroy
     redirect_to cocktails_path
   end
 
   def edit
-    @cocktail = set_cocktail
   end
 
   def update
@@ -46,6 +45,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :description, :photo)
+    params.require(:cocktail).permit(:name, :photo, :description)
   end
 end

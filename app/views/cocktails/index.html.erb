@@ -2,7 +2,7 @@
   <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="cocktail-card">
-        <div class="card-top" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, crop: :fill %>')">
+        <div class="card-top" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= cl_image_path cocktail.photo, crop: :fill %>)">
           <h5><%= cocktail.name %></h5>
           <div class="ingredient-list">
             <% cocktail.doses.each do |dose|%>
