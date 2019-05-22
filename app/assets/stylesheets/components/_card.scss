@@ -2,9 +2,10 @@
   background-color: white;
   font-size: 20px;
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+  border-radius: 1px;
   height: 250px;
   margin: 10px;
+  padding: 2px;
 }
 
 .card-top {
@@ -30,10 +31,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   background-color: white;
   height: 40px;
-  padding: 2px;
   padding-left: 10px;
   padding-right: 10px;
   a {
@@ -49,7 +48,7 @@
 .card-cocktail {
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 70px);
+  height: 500px;
   flex: 0 0 300px;
   display: flex;
   justify-content: center;

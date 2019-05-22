@@ -1,12 +1,21 @@
-.navbar-lewagon {
-  justify-content: space-between;
+/* Main navbar */
+.navbar-wagon {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
+  transition: all 0.3s ease;
+  height: 60px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.home-header {
+  font-size: 30px;
+  color: #2B2E4A;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.home-header:hover {
+  opacity: 0.7;
 }
+/* Logo */

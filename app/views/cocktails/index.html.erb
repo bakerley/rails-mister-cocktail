@@ -1,10 +1,8 @@
-<h1>My Cocktails</h1>
-<%= link_to "Add a cocktail", new_cocktail_path(@cocktails), class: "btn btn-ghost btn-sm" %>
 <div class="cards-cocktails row">
   <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="cocktail-card">
-        <div class="card-top">
+        <div class="card-top" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= asset_path('image6.jpg')%>);">
           <h5><%= cocktail.name %></h5>
           <div class="ingredient-list">
             <% cocktail.doses.each do |dose|%>
