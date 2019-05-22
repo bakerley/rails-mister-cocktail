@@ -1,16 +1,20 @@
 <div class="cocktail-info">
-  <div class="card-cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= asset_path('image7.jpg')%>);">
+  <div class="card-cocktail">
     <%= @cocktail.name %>
   </div>
   <div class="cocktail-description">
+    <div class="description-text">
     <h3>Description:</h3>
-    <div class="description-text"><%= @cocktail.description %></div>
+    <div class="cocktail-desc">
+    <%= @cocktail.description %>
+    </div>
     <br>
     <%= link_to "Edit description", edit_cocktail_path(@cocktail), class: 'btn btn-ghost btn-sm' %>
+    </div>
     <br>
     <br>
-    <h3>Ingredients: </h3>
     <div class="ingredients-list">
+    <h3>Ingredients: </h3>
       <% @doses.each do |dose| %>
         <div class="ingredient">
           <span><%= dose.ingredient.name %>, <strong><%= dose.description%></strong></span>
@@ -21,10 +25,10 @@
           </span>
         </div>
       <% end %>
+      <br>
+      <br>
+      <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), class: 'btn btn-ghost btn-sm' %>
     </div>
-    <br>
-    <br>
-    <%= link_to "+ Add an ingredient", new_cocktail_dose_path(@cocktail), class: 'btn btn-ghost btn-sm' %>
     <br>
     <br>
   </div>

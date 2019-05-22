@@ -2,6 +2,8 @@
   <%= simple_form_for @cocktail do |f| %>
     <%= f.input :name, as: :hidden %>
     <%= f.input :description %>
+    <%= f.input :photo, as: :hidden %>
+    <%= f.input :photo_cache, as: :hidden %>
     <%= f.submit "Submit", class: "btn btn-ghost" %>
   <% end %>
 </div>
